@@ -8,9 +8,8 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
+import ExampleCtrl from '../controllers/example.controller';
 import RoutesConfig from '../routes';
-
-// Modules
 
 const App = 'Mobile App';
 
@@ -21,6 +20,7 @@ Angular.module(App, [
 ]);
 
 new Loader(App)
+  .load(ExampleCtrl)
   .load(RoutesConfig);
 
 // Startup
